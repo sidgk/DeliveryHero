@@ -1,0 +1,6 @@
+requests
+responses  
+urllib3
+configparser
+pandas 
+matplotlib
