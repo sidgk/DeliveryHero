@@ -11,9 +11,13 @@ from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime, timedelta
 
 config = ConfigParser()
-config.read('./config/config.ini')
+
+
+'''config.read('./config/config.ini')
 durl = config.get('URLS', 'DURL')
-wurl = config.get('URLS', 'WURL')
+wurl = config.get('URLS', 'WURL')'''
+durl = "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=BTC&market=USD&apikey=32QVVW6PMISPM1HJ"
+wurl = "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY&symbol=BTC&market=USD&apikey=32QVVW6PMISPM1HJ"
 
 PIPELINE_ID = 1
 
@@ -33,7 +37,7 @@ default_args = {
 
 # Dag Definition, Defining the dag
 dag = DAG(
-    dag_id='currency_api_fetch_dag',
+    dag_id='BTC_API_fetch_dag',
     schedule_interval="0 * * * *",
     default_args=default_args,
     catchup=False)
@@ -63,7 +67,7 @@ convert_currency =  PythonOperator(
     dag=dag)
 #Create a task to do the calculations
 perform_calculations =  PythonOperator(
-    task_id='load_stockprice_to_CSV',
+    task_id='calculate_stockprice_to_CSV',
     python_callable=calculateInsights,
     dag=dag)
 #Created dummy task to explain Dependencies section.
