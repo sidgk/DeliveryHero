@@ -8,7 +8,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#Prerequisites)
 * [Summary](#Summary)
-* [Running the Application](#Running the Application)
+* [Running the Application](#Running-the-Application)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
