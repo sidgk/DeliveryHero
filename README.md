@@ -8,8 +8,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#Prerequisites)
 * [Summary](#Summary)
-* [Run the application](#Run the application)
-
+* [Running the Application](#Running the Application)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -60,7 +59,7 @@ pip install -r requirements.txt --> Because i have added all the required packag
 9. Entire application is containerized using docker-compose and the same is written in **docker-compose.yml** file.
 10. I have used the puckel docker image to run my airflow 
 
-<!-- Run the application -->
-## Run the application
+<!-- Running the Application -->
+## Running the Application
 You can run the entire application using one command i.e. **docker-compose up** 
 
