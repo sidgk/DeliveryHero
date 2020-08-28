@@ -3,12 +3,16 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
+* [Running the Application](#Running-the-Application)
 * [About the Project](#about-the-project)
   
 * [Getting Started](#getting-started)
   * [Prerequisites](#Prerequisites)
 * [Summary](#Summary)
-* [Running the Application](#Running-the-Application)
+
+<!-- Running the Application -->
+## Running the Application
+You can run the entire application using one command i.e. **docker-compose up** 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -57,9 +61,4 @@ pip install -r requirements.txt --> Because i have added all the required packag
 7. **config.ini** --> This file contains all the confidential details about the application, and it can be accessed by referencing to this file by using _ConfigParser_ module.
 8. The unittest to check the status of the URL's (durl and wurl) provided is written in **getcurrency_test.py**. 
 9. Entire application is containerized using docker-compose and the same is written in **docker-compose.yml** file.
-10. I have used the puckel docker image to run my airflow 
-
-<!-- Running the Application -->
-## Running the Application
-You can run the entire application using one command i.e. **docker-compose up** 
-
+10. I have used the puckel docker image to run my airflow dags.
